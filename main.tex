@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage[english, russian]{babel}
+\usepackage{amsfonts, amsmath}
+\usepackage{geometry}
+\geometry{
+  top=25mm, 
+}
+
+\author{Колесова Маша, Кантимиров Игорь }
+\date{}
+
+\begin{document}
+
+\maketitle
+\noindentПлоскость $\pi$ проходит через точки A(2,1,3), B(2,4,0), C(-3,0,4). Зафиксирован репер (A, $\overrightarrow{AB}$, $\overrightarrow{AC}$).\\
+\noindentНаходим координаты новых базисных векторов $\overrightarrow{AB}=(0,3,-3)$, $\overrightarrow{AC}=(-5,-1,1)$\\\\
+1) \textit{Точка p \in $ \pi$ имеет в этом репере координаты (5,3). Найдите координаты точки p в стандартном репере пространства $\mathbb{R}^3$.}\\\\
+Имея координаты точки в новом репере, найдем их в стандартном, пользуясь определением координат точки и разложив их по базису:\\\\
+A+5$\overrightarrow{AB}$+3$\overrightarrow{AC}$=(2,1,3)+5*(0,3,-3)+3*(-5,-1,1)=(-13,13,-9)\\\\
+Таким образом, получили координаты (-13,-13,-9).\\\\
+2) Найдем уравнение плоскости в пространстве по 3 точкам в стандартном репере:\\
+\begin{tabular}{|c c c|}
+x-2 & y-1 & z-3 \\
+0 & 3 & -3 \\
+-5 & -1 & 1 \\
+\end{tabular}
+= 0\\\\
+В каноническом виде получаем (x-2)*0+(y-1)*15+(z-3)*15=0\\
+Или в параметрическом 
+\begin{equation*}
+ \begin{cases}
+   x = -3 + 2$\lambda$, 
+   \\
+   y = 6 + 0$\lambda$,
+   \\
+   z = -2 + 3$\lambda$
+ \end{cases}
+\end{equation*}
+Подставим x, y, z в уравнение плоскости, чтобы найти точку пересечения
+\begin{equation*}
+ \begin{cases}
+   90 - 30 + 45*$\lambda$ - 60 = 0, 
+   \\
+   45$\lambda$ = 0,
+   \\
+   $\lambda$ = 0
+ \end{cases}
+\end{equation*}
+\Rightarrow 
+\begin{equation*}
+ \begin{cases}
+   x = -3, 
+   \\
+   y = 6,
+   \\
+   z = -2
+ \end{cases}
+\end{equation*}\\
+Находим координаты D' = (t_1, t_2) в плоскостном репере.
+(-3,6,-2) - (2,1,3) = t_1(0,3,-3) + t_2(-5,-1,1) \Rightarrow 
+\begin{equation*}
+ \begin{cases}
+   -5t_2 = -5, 
+   \\
+   3t_1 - t_2 = 5,
+   \\
+   -5 = -3t_1 + t_2
+ \end{cases}
+\end{equation*}\\
+\Rightarrow 3t_1 = 6, t_2 = 1
+\Rightarrow D' = (2,1) \in (A, $\overrightarrow{AB}$, $\overrightarrow{AC}$).
+\end{document}
+
